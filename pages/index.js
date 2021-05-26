@@ -4,7 +4,7 @@ export async function getStaticProps() {
   return { props: { hi: 'hello' } };
 }
 
-export default function Home({ hi }) {
+export default function Home() {
   return (
     <Container>
       <div className="flex flex-col max-w-2xl mx-auto space-y-6">
@@ -27,6 +27,10 @@ export default function Home({ hi }) {
           <li>2. Moshe - 4</li>
           <li>3. Zan - 3</li>
         </ol>
+        <h2 className="text-lg font-semibold tracking-wide text-gray-700">
+          Round One
+        </h2>
+        <p>N/A</p>
       </div>
     </Container>
   );
