@@ -11,10 +11,21 @@ export default function Home({ hi }) {
         <h1 className="text-xl font-semibold tracking-wide text-gray-900">
           NBA Playoffs Bet
         </h1>
+        <h2 className="text-lg font-semibold tracking-wide text-gray-700">
+          Total
+        </h2>
         <ol>
-          <li>Shalom - 6</li>
-          <li>Moshe - 4</li>
-          <li>Zan - 3</li>
+          <li>1. Shalom - 6</li>
+          <li>2. Moshe - 4</li>
+          <li>3. Zan - 3</li>
+        </ol>
+        <h2 className="text-lg font-semibold tracking-wide text-gray-700">
+          Play In
+        </h2>
+        <ol>
+          <li>1. Shalom - 6</li>
+          <li>2. Moshe - 4</li>
+          <li>3. Zan - 3</li>
         </ol>
       </div>
     </Container>
