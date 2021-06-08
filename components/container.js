@@ -11,7 +11,10 @@ export default function Container(props) {
     <div className="bg-white">
       <Head>
         <title>NBA Playoffs Bet</title>
-        {/* <link rel="canonical" href={`https://moshekatz.dev${router.asPath}`} /> */}
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80'>🏀</text></svg>"
+        />
       </Head>
       <Navigation />
       <main
