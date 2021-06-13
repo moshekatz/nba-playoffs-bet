@@ -343,13 +343,13 @@ const roundTwoBets = [
     betRound: 'round-two',
     betId: 'west-1-4',
     username: 'shalom',
-    bet: '',
+    bet: 'clippers-6',
   },
   {
     betRound: 'round-two',
     betId: 'west-1-4',
     username: 'zan',
-    bet: '',
+    bet: 'jazz-7',
   },
 
   {
@@ -402,11 +402,11 @@ const conFinalsBets = [];
 const finalsBets = [];
 
 export const allBets = [
-  ...playInBets,
-  ...extrasBets,
-  ...roundOneBets,
-  ...game7Bets,
   ...roundTwoBets,
+  ...roundOneBets,
+  ...playInBets,
+  ...game7Bets,
   ...conFinalsBets,
   ...finalsBets,
+  ...extrasBets,
 ];

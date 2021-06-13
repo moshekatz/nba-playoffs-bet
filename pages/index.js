@@ -19,10 +19,10 @@ export async function getStaticProps() {
   const betsByUser = getNormalizedBetsByUser(allBets);
   const ptsByUser = calculatePtsByUsername(betsByUser);
 
-  return { props: { ptsByRound, ptsByUser } };
+  return { props: { ptsByRound, ptsByUser, betsByUser } };
 }
 
-export default function Home({ ptsByRound, ptsByUser }) {
+export default function Home({ ptsByRound, ptsByUser, betsByUser }) {
   const sortedPtsByRound = {};
   Object.entries(ptsByRound).forEach(([round, roundPts]) => {
     if (round !== 'total') {
@@ -61,16 +61,70 @@ export default function Home({ ptsByRound, ptsByUser }) {
                   }`;
                   return (
                     <li key={username}>
-                      <details>
-                        <summary className="capitalize font-semibold">
-                          {i + 1}. {title}
-                        </summary>
+                      {round === 'total' ? (
+                        <ol className="mt-2 mb-2">
+                          <li className="capitalize font-bold">
+                            {i + 1}. {title}
+                          </li>
+                        </ol>
+                      ) : (
+                        <details>
+                          <summary className="capitalize font-semibold">
+                            {i + 1}. {title}
+                          </summary>
 
-                        <p className="mt-2 mb-2">
-                          {/* {JSON.stringify(roundPts[1])} */}
-                          Ahalan
-                        </p>
-                      </details>
+                          <ul className="mt-2 mb-2">
+                            {Object.entries(ptsByUser[username][round]).map(
+                              ([key, score]) => {
+                                if (
+                                  round === 'round-one' ||
+                                  round === 'round-two' ||
+                                  round === 'game-7'
+                                ) {
+                                  if (key !== 'total')
+                                    return (
+                                      <li key={key}>{`${
+                                        betsByUser[username][round][key].split(
+                                          '-'
+                                        )[0]
+                                      } in ${
+                                        betsByUser[username][round][key].split(
+                                          '-'
+                                        )[1]
+                                      } => ${score} pts`}</li>
+                                    );
+                                }
+
+                                if (round === 'play-in') {
+                                  if (
+                                    key !== 'total' &&
+                                    !(username === 'zan' && key === 'east-7')
+                                  )
+                                    return (
+                                      <li key={key}>{`${
+                                        betsByUser[username][round][key]
+                                      } as ${
+                                        key.split('-')[1]
+                                      } => ${score} pts`}</li>
+                                    );
+                                }
+
+                                if (round === 'extras') {
+                                  return Object.entries(
+                                    betsByUser[username][round]
+                                  ).map(([betId, bet]) => {
+                                    return (
+                                      <li key={betId}>
+                                        {betId} => {bet}
+                                      </li>
+                                    );
+                                  });
+                                }
+                              }
+                            )}
+                          </ul>
+                        </details>
+                      )}
                     </li>
                   );
                 })}
