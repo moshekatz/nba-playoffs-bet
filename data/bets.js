@@ -387,7 +387,7 @@ const roundTwoBets = [
     betRound: 'round-two',
     betId: 'west-1-4',
     username: 'actual',
-    bet: 'clippers-7',
+    bet: 'clippers-6',
   },
   {
     betRound: 'round-two',
