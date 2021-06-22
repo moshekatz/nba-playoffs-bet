@@ -79,7 +79,8 @@ export default function Home({ ptsByRound, ptsByUser, betsByUser }) {
                                 if (
                                   round === 'round-one' ||
                                   round === 'round-two' ||
-                                  round === 'game-7'
+                                  round === 'game-7' ||
+                                  round === 'conf-finals'
                                 ) {
                                   if (key !== 'total')
                                     return (
