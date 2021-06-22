@@ -292,6 +292,56 @@ const game7Bets = [
     username: 'actual',
     bet: 'clippers-15',
   },
+
+  {
+    betRound: 'game-7',
+    betId: 'nets-bucks-7',
+    username: 'moshe',
+    bet: 'bucks-4',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'nets-bucks-7',
+    username: 'shalom',
+    bet: 'nets-8',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'nets-bucks-7',
+    username: 'zan',
+    bet: 'nets-16',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'nets-bucks-7',
+    username: 'actual',
+    bet: 'bucks-4',
+  },
+
+  {
+    betRound: 'game-7',
+    betId: 'philli-hawks-7',
+    username: 'moshe',
+    bet: 'philli-9',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'philli-hawks-7',
+    username: 'shalom',
+    bet: 'hawks-7',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'philli-hawks-7',
+    username: 'zan',
+    bet: 'philli-5',
+  },
+  {
+    betRound: 'game-7',
+    betId: 'philli-hawks-7',
+    username: 'actual',
+    bet: 'hawks-7',
+  },
 ];
 
 const roundTwoBets = [
@@ -397,7 +447,57 @@ const roundTwoBets = [
   },
 ];
 
-const conFinalsBets = [];
+const confFinalsBets = [
+    {
+      betRound: 'conf-finals',
+      betId: 'suns-clippers',
+      username: 'moshe',
+      bet: 'suns-5',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'suns-clippers',
+      username: 'shalom',
+      bet: 'clippers-6',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'suns-clippers',
+      username: 'zan',
+      bet: 'suns-6',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'suns-clippers',
+      username: 'actual',
+      bet: '',
+    },
+
+    {
+      betRound: 'conf-finals',
+      betId: 'bucks-hawks',
+      username: 'moshe',
+      bet: '',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'bucks-hawks',
+      username: 'shalom',
+      bet: '',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'bucks-hawks',
+      username: 'zan',
+      bet: '',
+    },
+    {
+      betRound: 'conf-finals',
+      betId: 'bucks-hawks',
+      username: 'actual',
+      bet: '',
+    },
+];
 
 const finalsBets = [];
 
@@ -406,7 +506,7 @@ export const allBets = [
   ...roundOneBets,
   ...playInBets,
   ...game7Bets,
-  ...conFinalsBets,
+  ...confFinalsBets,
   ...finalsBets,
   ...extrasBets,
 ];
