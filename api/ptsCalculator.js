@@ -90,6 +90,10 @@ const roundTwoPts2PredicatesMap = new Map();
 roundTwoPts2PredicatesMap.set(8, winnerAndGames);
 roundTwoPts2PredicatesMap.set(4, winnerOnly);
 
+const confFinalsPts2PredicatesMap = new Map();
+confFinalsPts2PredicatesMap.set(16, winnerAndGames);
+confFinalsPts2PredicatesMap.set(8, winnerOnly);
+
 const game7Pts2PredicatesMap = new Map();
 game7Pts2PredicatesMap.set(3, closestBet);
 
@@ -116,9 +120,13 @@ const calculatorMap = {
     predicates: roundTwoPts2PredicatesMap,
   },
   'game-7': {
-    bets: ['clippers-mavericks-7'],
+    bets: ['clippers-mavericks-7', 'nets-bucks-7', 'philli-hawks-7'],
     predicates: game7Pts2PredicatesMap,
   },
+  'conf-finals': {
+    bets: ['suns-clippers','bucks-hawks'],
+    predicates: confFinalsPts2PredicatesMap
+  }
 };
 
 function calculatePtsByRoundForUser(round, actualBet, userBet) {
@@ -169,5 +177,9 @@ function winnerOnly(betId, actualBet, userBet) {
 function closestBet(betId, actualBet, userBet) {
   if (betId === 'clippers-mavericks-7' && userBet[betId] === 'clippers-4')
     return true;
+  if(betId === 'nets-bucks-7' && userBet[betId] === 'bucks-4')
+    return true
+  if(betId === 'philli-hawks-7' && userBet[betId] === 'hawks-7')
+    return true
   return false;
 }
