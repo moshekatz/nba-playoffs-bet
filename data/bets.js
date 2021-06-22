@@ -477,19 +477,19 @@ const confFinalsBets = [
       betRound: 'conf-finals',
       betId: 'bucks-hawks',
       username: 'moshe',
-      bet: '',
+      bet: 'bucks-4',
     },
     {
       betRound: 'conf-finals',
       betId: 'bucks-hawks',
       username: 'shalom',
-      bet: '',
+      bet: 'bucks-5',
     },
     {
       betRound: 'conf-finals',
       betId: 'bucks-hawks',
       username: 'zan',
-      bet: '',
+      bet: 'bucks-6',
     },
     {
       betRound: 'conf-finals',
@@ -502,11 +502,11 @@ const confFinalsBets = [
 const finalsBets = [];
 
 export const allBets = [
+  ...confFinalsBets,
   ...roundTwoBets,
   ...roundOneBets,
   ...playInBets,
   ...game7Bets,
-  ...confFinalsBets,
   ...finalsBets,
   ...extrasBets,
 ];
