@@ -470,7 +470,7 @@ const confFinalsBets = [
       betRound: 'conf-finals',
       betId: 'suns-clippers',
       username: 'actual',
-      bet: '',
+      bet: 'suns-6',
     },
 
     {
