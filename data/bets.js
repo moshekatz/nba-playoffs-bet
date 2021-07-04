@@ -495,7 +495,7 @@ const confFinalsBets = [
       betRound: 'conf-finals',
       betId: 'bucks-hawks',
       username: 'actual',
-      bet: '',
+      bet: 'bucks-6',
     },
 ];
 
