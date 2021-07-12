@@ -80,11 +80,19 @@ export default function Home({ ptsByRound, ptsByUser, betsByUser }) {
                                   round === 'round-one' ||
                                   round === 'round-two' ||
                                   round === 'game-7' ||
-                                  round === 'conf-finals'
+                                  round === 'conf-finals' ||
+                                  round === 'the-finals'
                                 ) {
+                                  
+                                  if (key === 'finals-mvp')
+                                  return (
+                                    <li key={key}>{`${
+                                      betsByUser[username][round][key]
+                                    } is mvp => ${score} pts`}</li>
+                                  );
                                   if (key !== 'total')
                                     return (
-                                      <li key={key}>{`${
+                                      <li className={key === 'finals-score' ? 'font-bold' : ''} key={key}>{`${
                                         betsByUser[username][round][key].split(
                                           '-'
                                         )[0]
