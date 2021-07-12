@@ -499,14 +499,238 @@ const confFinalsBets = [
     },
 ];
 
-const finalsBets = [];
+const finalsBets = [
+  {
+    betRound: 'the-finals',
+    betId: 'finals-score',
+    username: 'moshe',
+    bet: 'bucks-7',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-score',
+    username: 'shalom',
+    bet: 'suns-6',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-score',
+    username: 'zan',
+    bet: 'suns-6',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-score',
+    username: 'actual',
+    bet: '',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-mvp',
+    username: 'moshe',
+    bet: 'middleton',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-mvp',
+    username: 'shalom',
+    bet: 'booker',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-mvp',
+    username: 'zan',
+    bet: 'paul',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'finals-mvp',
+    username: 'actual',
+    bet: '',
+  },
+
+  {
+    betRound: 'the-finals',
+    betId: 'game-1',
+    username: 'moshe',
+    bet: 'bucks-4',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-1',
+    username: 'shalom',
+    bet: 'suns-7',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-1',
+    username: 'zan',
+    bet: 'suns-8',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-1',
+    username: 'actual',
+    bet: 'suns-13',
+  },
+
+  {
+    betRound: 'the-finals',
+    betId: 'game-2',
+    username: 'moshe',
+    bet: 'bucks-5',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-2',
+    username: 'shalom',
+    bet: 'suns-7',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-2',
+    username: 'zan',
+    bet: 'suns-5',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-2',
+    username: 'actual',
+    bet: 'suns-10',
+  },
+
+  {
+    betRound: 'the-finals',
+    betId: 'game-3',
+    username: 'moshe',
+    bet: 'bucks-5',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-3',
+    username: 'shalom',
+    bet: 'bucks-10',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-3',
+    username: 'zan',
+    bet: 'bucks-10',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-3',
+    username: 'actual',
+    bet: 'bucks-20',
+  },
+
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-4',
+  //   username: 'moshe',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-4',
+  //   username: 'shalom',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-4',
+  //   username: 'zan',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-4',
+  //   username: 'actual',
+  //   bet: '',
+  // },
+
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-5',
+  //   username: 'moshe',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-5',
+  //   username: 'shalom',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-5',
+  //   username: 'zan',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-5',
+  //   username: 'actual',
+  //   bet: '',
+  // },
+
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-6',
+  //   username: 'moshe',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-6',
+  //   username: 'shalom',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-6',
+  //   username: 'zan',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-6',
+  //   username: 'actual',
+  //   bet: '',
+  // },
+
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-7',
+  //   username: 'moshe',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-7',
+  //   username: 'shalom',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-7',
+  //   username: 'zan',
+  //   bet: '',
+  // },
+  // {
+  //   betRound: 'the-finals',
+  //   betId: 'game-7',
+  //   username: 'actual',
+  //   bet: '',
+  // },
+];
 
 export const allBets = [
+  ...finalsBets,
   ...confFinalsBets,
   ...roundTwoBets,
   ...roundOneBets,
   ...playInBets,
   ...game7Bets,
-  ...finalsBets,
   ...extrasBets,
 ];

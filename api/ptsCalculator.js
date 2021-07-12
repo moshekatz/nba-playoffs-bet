@@ -97,6 +97,13 @@ confFinalsPts2PredicatesMap.set(8, winnerOnly);
 const game7Pts2PredicatesMap = new Map();
 game7Pts2PredicatesMap.set(3, closestBet);
 
+const finalsPts2PredicatesMap = new Map();
+finalsPts2PredicatesMap.set(5, finalsMvpPredicate);
+finalsPts2PredicatesMap.set(4, closestFinalsGameBet);
+finalsPts2PredicatesMap.set(3, closestDrawFinalsGameBet);
+finalsPts2PredicatesMap.set(32, winnerAndGames);
+roundOnePts2PredicatesMap.set(16, winnerOnly);
+
 const calculatorMap = {
   'play-in': {
     bets: ['east-7', 'east-8', 'west-7', 'west-8'],
@@ -126,6 +133,10 @@ const calculatorMap = {
   'conf-finals': {
     bets: ['suns-clippers','bucks-hawks'],
     predicates: confFinalsPts2PredicatesMap
+  },
+  'the-finals': {
+    bets: ['finals-score', 'finals-mvp', 'game-1', 'game-2', 'game-3',], // 'game-4', 'game-5', 'game-6', 'game-7'],
+    predicates: finalsPts2PredicatesMap
   }
 };
 
@@ -182,4 +193,17 @@ function closestBet(betId, actualBet, userBet) {
   if(betId === 'philli-hawks-7' && userBet[betId] === 'hawks-7')
     return true
   return false;
+}
+
+function finalsMvpPredicate(betId, actualBet, userBet) {
+  return false;
+}
+
+function closestFinalsGameBet(betId, actualBet, userBet) {
+  if(betId === 'game-1' && userBet[betId] === 'suns-8') return true;
+  if(betId === 'game-2' && userBet[betId] === 'suns-7') return true; 
+}
+
+function closestDrawFinalsGameBet(betId, actualBet, userBet) {
+  if(betId === 'game-3' && userBet[betId] === 'bucks-10') return true;
 }
