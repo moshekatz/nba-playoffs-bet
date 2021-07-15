@@ -624,30 +624,30 @@ const finalsBets = [
     bet: 'bucks-20',
   },
 
-  // {
-  //   betRound: 'the-finals',
-  //   betId: 'game-4',
-  //   username: 'moshe',
-  //   bet: '',
-  // },
-  // {
-  //   betRound: 'the-finals',
-  //   betId: 'game-4',
-  //   username: 'shalom',
-  //   bet: '',
-  // },
-  // {
-  //   betRound: 'the-finals',
-  //   betId: 'game-4',
-  //   username: 'zan',
-  //   bet: '',
-  // },
-  // {
-  //   betRound: 'the-finals',
-  //   betId: 'game-4',
-  //   username: 'actual',
-  //   bet: '',
-  // },
+  {
+    betRound: 'the-finals',
+    betId: 'game-4',
+    username: 'moshe',
+    bet: 'bucks-7',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-4',
+    username: 'shalom',
+    bet: 'bucks-8',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-4',
+    username: 'zan',
+    bet: 'bucks-12',
+  },
+  {
+    betRound: 'the-finals',
+    betId: 'game-4',
+    username: 'actual',
+    bet: 'bucks-6',
+  },
 
   // {
   //   betRound: 'the-finals',

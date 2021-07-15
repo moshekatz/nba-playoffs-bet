@@ -135,7 +135,7 @@ const calculatorMap = {
     predicates: confFinalsPts2PredicatesMap
   },
   'the-finals': {
-    bets: ['finals-score', 'finals-mvp', 'game-1', 'game-2', 'game-3',], // 'game-4', 'game-5', 'game-6', 'game-7'],
+    bets: ['finals-score', 'finals-mvp', 'game-1', 'game-2', 'game-3', 'game-4'], // 'game-5', 'game-6', 'game-7'],
     predicates: finalsPts2PredicatesMap
   }
 };
@@ -202,6 +202,7 @@ function finalsMvpPredicate(betId, actualBet, userBet) {
 function closestFinalsGameBet(betId, actualBet, userBet) {
   if(betId === 'game-1' && userBet[betId] === 'suns-8') return true;
   if(betId === 'game-2' && userBet[betId] === 'suns-7') return true; 
+  if(betId === 'game-4' && userBet[betId] === 'bucks-7') return true; 
 }
 
 function closestDrawFinalsGameBet(betId, actualBet, userBet) {
